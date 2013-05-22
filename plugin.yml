@@ -1,6 +1,7 @@
 name: UsefulCommands
 main: org.noip.evan1026.UsefulCommands
 version: 1.0
+
 commands:
     alias:
         description: Aliases a command.
@@ -14,3 +15,7 @@ commands:
         description: Lists all existing aliases.
         permission: evan1026.commands.aliasList
         usage: /<command>
+        
+permissions:
+    evan1026.commands.alias:
+        

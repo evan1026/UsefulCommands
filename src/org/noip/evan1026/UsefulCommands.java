@@ -7,10 +7,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.SimplePluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.noip.evan1026.alias.*;
+import org.noip.evan1026.playerInfo.*;
 
 public class UsefulCommands extends JavaPlugin {
     
-    private AliasHandler _aliasHandler = new AliasHandler(this);
+    private AliasHandler      _aliasHandler      = new AliasHandler(this);
+    private PlayerInfoHandler _playerInfoHandler = new PlayerInfoHandler();
 
     public void onEnable(){
         loadFiles();
