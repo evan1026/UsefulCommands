@@ -12,7 +12,7 @@ import org.noip.evan1026.playerInfo.*;
 public class UsefulCommands extends JavaPlugin {
     
     private AliasHandler      _aliasHandler      = new AliasHandler(this);
-    private PlayerInfoHandler _playerInfoHandler = new PlayerInfoHandler();
+    private PlayerInfoHandler _playerInfoHandler = new PlayerInfoHandler(this);
 
     public void onEnable(){
         loadFiles();
@@ -23,9 +23,10 @@ public class UsefulCommands extends JavaPlugin {
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
 
-        if      (command.getName().equalsIgnoreCase("alias"))       return _aliasHandler.createAlias(sender, args);
-        else if (command.getName().equalsIgnoreCase("removeAlias")) return _aliasHandler.removeAlias(sender, args);
-        else if (command.getName().equalsIgnoreCase("aliasList"))   return _aliasHandler.aliasList(sender);
+        if      (command.getName().equalsIgnoreCase("alias"))       return _aliasHandler     .createAlias  (sender, args);
+        else if (command.getName().equalsIgnoreCase("removeAlias")) return _aliasHandler     .removeAlias  (sender, args);
+        else if (command.getName().equalsIgnoreCase("aliasList"))   return _aliasHandler     .aliasList    (sender);
+        else if (command.getName().equalsIgnoreCase("playerInfo"))  return _playerInfoHandler.getPlayerInfo(sender, args);
 
         return false;
     }
