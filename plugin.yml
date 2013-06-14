@@ -15,7 +15,22 @@ commands:
         description: Lists all existing aliases.
         permission: evan1026.commands.aliasList
         usage: /<command>
+    playerInfo:
+        description: Prints out information on a given player. Defaults to the sender if no player is given.
+        permission: evan1026.commands.playerInfo
+        usage: /<command> [player]
         
 permissions:
     evan1026.commands.alias:
+        description: Gives access to the /alias command.
+        default: true
+    evan1026.commands.removeAlias:
+        description: Gives access to the /removeAlias command.
+        default: op
+    evan1026.commands.aliasList:
+        description: Gives access to the /aliasList command.
+        default: true
+    evan1026.commands.playerInfo:
+        description: Gives access to the /playerInfo command.
+        default: op
         
